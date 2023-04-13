@@ -1,6 +1,7 @@
 import java.util.Collections;
+import java.util.Iterator;
 
-class Task implements Comparable<Task>{
+class Task implements Comparable<Task>,Iterable<Task>{
     private String title;
     private String desc;
     private int priority;
@@ -57,5 +58,10 @@ class Task implements Comparable<Task>{
         return compareResult;
 
 
+    }
+
+    @Override
+    public Iterator<Task> iterator() {
+        return this.iterator();
     }
 }
